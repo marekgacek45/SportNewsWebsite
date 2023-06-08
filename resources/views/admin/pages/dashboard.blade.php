@@ -14,4 +14,6 @@
 
 
 <a href="{{route('home')}}"><button>home</button></a>
+
+<a href="{{route('admin.categories')}}"><button>kategorie</button></a>
 @endsection

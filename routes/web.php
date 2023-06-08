@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,12 @@ Route::group(['prefix'=>'newses'],function(){
     
     Route::get('/create',[NewsController::class,'create'])->name('admin.create');
     Route::post('/create',[NewsController::class,'create'])->name('admin.store');
+});
+
+//CATEGORIES
+Route::group(['prefix'=>'categories'],function(){
+    Route::get('/',[CategoryController::class,'index'])->name('admin.categories');
+    Route::post('/create',[CategoryController::class,'store'])->name('admin.store');
+    
+    
 });
