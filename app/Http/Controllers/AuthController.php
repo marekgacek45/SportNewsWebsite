@@ -30,4 +30,23 @@ class AuthController extends Controller
         Auth::login($user);
         return back()->with('success,udało się');
     }
+
+    public function postLogin(Request $request){
+       $details= $request->validate([
+            'name'=>'required',
+            'password'=>'required'
+        ]);
+        if(Auth::attempt($details)){
+            return redirect()->intended('/home');
+        }
+
+        return back()->withErrors([
+            'name'=>'nieprawidłowy login lub hasło'
+        ]);
+
+    }
+    public function logout(){
+        Auth::logout();
+        return back();
+    }
 }
