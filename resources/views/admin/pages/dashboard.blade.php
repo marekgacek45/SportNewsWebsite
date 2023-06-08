@@ -1,7 +1,7 @@
 @extends('layout/master')
-@section('title','HomePage')
+@section('title','dash')
 @section('content')
-<h1>homepage</h1>
+<h1>admin panel</h1>
 
 @auth
 <form action="{{route('logout')}}"method="post">
@@ -15,5 +15,5 @@
 
 <a href="{{route('login')}}"><button>login</button></a>
 <a href="{{route('register')}}"><button>register</button></a>
-<a href="{{route('admin')}}"><button>admin</button></a>
+<a href="{{route('home')}}"><button>home</button></a>
 @endsection

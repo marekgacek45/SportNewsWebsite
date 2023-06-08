@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PagesController;
 
 /*
@@ -25,3 +26,6 @@ Route::get('/register',[AuthController::class,'showRegister'])->name('register')
 Route::post('/register',[AuthController::class,'postRegister'])->name('register')->middleware('guest');
 
 Route::post('/logout',[AuthController::class,'logout'])->name('logout')->middleware('auth');
+
+//AUTH
+Route::get('/admin',[AdminController::class,'dashboard'])->name('admin');
