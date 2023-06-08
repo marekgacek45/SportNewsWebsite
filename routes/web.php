@@ -17,6 +17,7 @@ use App\Http\Controllers\PagesController;
 */
 
 Route::get('/home',[PagesController::class,'home'])->name('home');
+Route::get('/admin',[AdminController::class,'dashboard'])->name('admin')->middleware('admin');
 
 //AUTH
 Route::get('/login',[AuthController::class,'showLogin'])->name('login')->middleware('guest');
@@ -27,5 +28,10 @@ Route::post('/register',[AuthController::class,'postRegister'])->name('register'
 
 Route::post('/logout',[AuthController::class,'logout'])->name('logout')->middleware('auth');
 
-//AUTH
-Route::get('/admin',[AdminController::class,'dashboard'])->name('admin')->middleware('admin');
+//NEWSES
+Route::group(['prefix'=>'newses'],function(){
+    Route::get('/',[NewsController::class,'index'])->name('admin.news');
+    
+    Route::get('/create',[NewsController::class,'create'])->name('admin.create');
+    Route::post('/create',[NewsController::class,'create'])->name('admin.store');
+});
