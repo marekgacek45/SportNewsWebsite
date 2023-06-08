@@ -13,7 +13,5 @@
 @endauth
 
 
-<a href="{{route('login')}}"><button>login</button></a>
-<a href="{{route('register')}}"><button>register</button></a>
 <a href="{{route('home')}}"><button>home</button></a>
 @endsection

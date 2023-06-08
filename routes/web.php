@@ -28,4 +28,4 @@ Route::post('/register',[AuthController::class,'postRegister'])->name('register'
 Route::post('/logout',[AuthController::class,'logout'])->name('logout')->middleware('auth');
 
 //AUTH
-Route::get('/admin',[AdminController::class,'dashboard'])->name('admin');
+Route::get('/admin',[AdminController::class,'dashboard'])->name('admin')->middleware('admin');
