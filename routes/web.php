@@ -30,7 +30,7 @@ Route::post('/login', [AuthController::class, 'postLogin'])->name('login')->midd
 Route::get('/register', [AuthController::class, 'showRegister'])->name('register')->middleware('guest');
 Route::post('/register', [AuthController::class, 'postRegister'])->name('register')->middleware('guest');
 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
 
 //ADMIN

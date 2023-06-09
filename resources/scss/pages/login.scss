@@ -1,0 +1,33 @@
+
+.login{
+    // height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & h2{
+        margin-bottom: 1em;
+    }
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    padding: 4em 2em;
+    box-shadow: 5px 5px 12px #6c757d;
+    border-radius: 12px;
+
+    & button{
+        margin-top: 1em;
+    }
+    &-text{
+        color: red;
+    }
+}
+
+.register{
+    margin-top: 1em;
+}

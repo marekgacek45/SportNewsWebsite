@@ -1,7 +1,26 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap');
+
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	line-height: 1.6;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+.section{
+	padding:2em;
+	text-align: center;
 }
