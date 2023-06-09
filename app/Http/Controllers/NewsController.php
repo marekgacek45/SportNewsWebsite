@@ -37,4 +37,9 @@ class NewsController extends Controller
 
     return back()->with('success','news dodany');
     }
+
+    public function destroy($id){
+        News::findOrFail($id)->delete();
+        return back()->with('success','News usunięty');
+    }
 }
