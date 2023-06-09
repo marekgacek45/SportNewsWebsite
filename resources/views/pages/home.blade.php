@@ -17,4 +17,12 @@
 <a href="{{route('register')}}"><button>register</button></a>
 
 <a href="{{route('admin')}}"><button>admin</button></a>
+
+@foreach ($newses as $news)
+    <h2>{{$news->title}}</h2>
+    <p>{{$news->description}}</p>
+    <img src="{{asset('storage/'. $news->image)}}" alt="">
+   
+@endforeach
+
 @endsection

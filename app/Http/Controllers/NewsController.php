@@ -24,11 +24,15 @@ class NewsController extends Controller
         'category_id'=>'required',
        ]);
 
+     $image_name = 'newses/' .time() . rand(0,9999) . "." .$request->image->getClientOriginalExtension();
+     $request->image->storeAs('public',$image_name); 
+
     $news = News::create([
         'title'=>$request->title,
         'description'=>$request->description,
         'content'=>$request->content,
         'category_id'=>$request->category_id,
+        'image'=>$image_name,
     ]);
 
     return back()->with('success','news dodany');

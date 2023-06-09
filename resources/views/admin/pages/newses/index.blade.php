@@ -9,7 +9,9 @@
 
 
 
-
+@foreach ($newses as $news)
+    <h2>{{$news->title}}</h2>
+@endforeach
 
 
 

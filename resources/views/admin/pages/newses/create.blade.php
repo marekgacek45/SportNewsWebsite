@@ -9,7 +9,7 @@
 
 
 
-<form action="{{route('admin.store')}}"method="post">
+<form action="{{route('admin.store')}}"method="post" enctype="multipart/form-data">
     @csrf
     
     <label for="title">title</label>
@@ -24,6 +24,10 @@
         <option value="{{$category->id}}">{{$category->name}}</option>
     @endforeach
 </select>
+
+<label for="image">image</label>
+<input type="file" name="image" id="image">
+
 
 <textarea name="content" id="content" cols="30" rows="10"></textarea>
 
