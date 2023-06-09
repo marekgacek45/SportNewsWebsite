@@ -8,7 +8,7 @@
 
 
 
-<form action="{{route('admin.store')}}"method="post">
+<form action="{{route('admin.category.store')}}"method="post">
     @csrf
     
     <label for="name">name</label>
