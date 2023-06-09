@@ -9,8 +9,7 @@ class PagesController extends Controller
 {
     public function home()
     {
-        // $newses = News::all();
-        // return view('pages/home',['newses'=>$newses]);
+
         $newses = News::with('category')->orderBy('id', 'desc')->get();
         $lastNews = $newses->first();
         $newses->shift();
@@ -18,7 +17,8 @@ class PagesController extends Controller
     }
     public function news($id)
     {
+        $newses = News::with('category')->orderBy('id', 'desc')->get();
         $news = News::with('category')->findOrFail($id);
-        return view('pages/news', ['news' => $news]);
+        return view('pages/news', ['news' => $news,'newses' => $newses,]);
     }
 }
