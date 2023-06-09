@@ -9,22 +9,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Piłka Nożna</a>
+            <a class="nav-link active" aria-current="page" href="{{route('category',$id = 1)}}">Piłka Nożna</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Hokej</a>
+            <a class="nav-link" href="{{route('category',$id = 2)}}">Koszykówka</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Pozostałe sporty
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('category',$id = 3)}}">Hokej</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('category',$id = 4)}}">Pozostałe</a>
+          </li>
+         
           <li class="nav-item">
             <a class="nav-link" href="#">Felietony</a>
           </li>

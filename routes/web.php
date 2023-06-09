@@ -21,6 +21,7 @@ use App\Http\Controllers\CategoryController;
 //PAGES
 Route::get('/home', [PagesController::class, 'home'])->name('home');
 Route::get('/news/{id}', [PagesController::class, 'news'])->name('news');
+Route::get('/category/{id}', [PagesController::class, 'category'])->name('category');
 
 
 //AUTH
