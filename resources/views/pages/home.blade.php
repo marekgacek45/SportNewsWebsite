@@ -4,48 +4,51 @@
 
 
     <main>
-        <section class="home section container">
-            <h3>Najnowsze Newsy:</h3>
-            <div class="home__latest">
-                <a href="{{ route('news', $lastNews->id) }}">
-                    <div class="home__latest-last"
-                        style="background-image: url('{{ asset('storage/' . $lastNews->image) }}');">
-                        <div class="home__latest-last--opacity"></div>
-                        <div class="home__latest-last-text">
-                            <h3>
-                                {{ $lastNews->title }}
-                            </h3>
-                            <p>
-                                {{ $lastNews->description }}
-                            </p>
-                        </div>
+        <div style="background-image: url({{asset('storage/news_bgc.jpg')}})" class="news_bgc">
+            <div class="news_bgc-opacity"></div>
+            <section class="home section container">
+                
+                <div class="home__latest">
+                    <a href="{{ route('news', $lastNews->id) }}">
+                        <div class="home__latest-last"
+                            style="background-image: url('{{ asset('storage/' . $lastNews->image) }}');">
+                            <div class="home__latest-last--opacity"></div>
+                            <div class="home__latest-last-text">
+                                <h3>
+                                    {{ $lastNews->title }}
+                                </h3>
+                                <p>
+                                    {{ $lastNews->description }}
+                                </p>
+                            </div>
 
-                </a>
-            </div>
-            <div class="home__latest-rest">
-                <?php foreach ($newses as $news): ?>
-                <a href="{{ route('news', $news->id) }}">
-                    <div class="home__latest-rest-card">
-                        <div class="home__latest-rest-card-text">
-                            <h3>
-                                {{ $news->title }}
-                            </h3>
+                    </a>
+                </div>
+                <div class="home__latest-rest">
+                    <?php foreach ($newses as $news): ?>
+                    <a href="{{ route('news', $news->id) }}">
+                        <div class="home__latest-rest-card">
+                            <div class="home__latest-rest-card-text">
+                                <h3>
+                                    {{ $news->title }}
+                                </h3>
 
+                            </div>
+                            <img src="{{ asset('storage/' . $news->image) }}" alt="">
                         </div>
-                        <img src="{{ asset('storage/' . $news->image) }}" alt="">
-                    </div>
-                </a>
-                <?php endforeach ?>
-            </div>
-            </div>
+                    </a>
+                    <?php endforeach ?>
+                </div>
+        </div>
+        </div>
         </section>
-
+        </div>
         <section class="section">
             <h3>Wiadomości z kategorii: Piłka Nożna</h3>
             @foreach ($football_newses as $football_news)
                 <p>{{ $football_news->title }}</p>
             @endforeach
-            <a href="{{route("category",$football_news->category_id)}}">Więcej wiadomości z tej kategorii</a>
+            <a href="{{ route('category', $football_news->category_id) }}">Więcej wiadomości z tej kategorii</a>
         </section>
         <section class="section">
             <h3>Wiadomości z kategorii: Koszykówka</h3>
@@ -59,7 +62,7 @@
             @foreach ($hockey_newses as $hockey_news)
                 <p>{{ $hockey_news->title }}</p>
             @endforeach
-            <a href="{{route("category",$hockey_news->category_id)}}">Więcej wiadomości z tej kategorii</a>
+            <a href="{{ route('category', $hockey_news->category_id) }}">Więcej wiadomości z tej kategorii</a>
         </section>
         <section class="section">
             <h3>Wiadomości z kategorii: Pozostałe</h3>
