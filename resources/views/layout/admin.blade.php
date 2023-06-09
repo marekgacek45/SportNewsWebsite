@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
+    <title>Sportowe Newsy - @yield('title')</title>
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
@@ -15,7 +15,11 @@
 
 <body>
     @include('components/nav')
-    @yield('content')
+    <main class="section container">
+        @include('../admin/components/sidebar')
+    
+
+    </main>
 
 
 
