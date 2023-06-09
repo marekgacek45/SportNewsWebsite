@@ -14,4 +14,11 @@
 
 
 <a href="{{route('home')}}"><button>home</button></a>
+
+<a href="{{route('admin.categories')}}"><button>kategorie</button></a>
+<a href="{{route('admin.newses')}}"><button>newsy</button></a>
+
+<button type="button" class="btn btn-primary">Primary</button>
+
+
 @endsection
