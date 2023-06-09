@@ -18,8 +18,9 @@ use App\Http\Controllers\CategoryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+//PAGES
 Route::get('/home', [PagesController::class, 'home'])->name('home');
+Route::get('/news/{id}', [PagesController::class, 'news'])->name('news');
 
 
 //AUTH
