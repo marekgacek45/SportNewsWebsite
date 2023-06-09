@@ -31,10 +31,10 @@
         </ul>
         <div>
             <a href="{{route('login')}}"><i class="uil uil-user"></i></a>
+            <a href="{{route('admin')}}"><i class="uil uil-edit"></i></a>
             @auth
                 <a href="{{route('logout')}}"><i class="uil uil-sign-out-alt"></i></a>
             @endauth
-            <a href="{{route('admin')}}"><i class="uil uil-edit"></i></a>
         </div>
       </div>
     </div>
