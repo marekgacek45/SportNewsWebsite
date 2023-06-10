@@ -28,7 +28,7 @@
                                                 <button class="btn"><i
                                                     class="uil uil-eye" style="font-size:2rem"></i></button></a>
 
-                                            <a href=""><button class="btn"><i class="uil uil-edit"  style="font-size:2rem"></i></button></a>
+                                            <a href="{{route('admin.edit', $news->id)}}"><button class="btn"><i class="uil uil-edit"  style="font-size:2rem"></i></button></a>
                                             <a href=""></a>
 
 

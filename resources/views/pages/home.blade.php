@@ -1,5 +1,5 @@
 @extends('layout/master')
-@section('title', 'HomePage')
+@section('title', 'Sportowe Newsy')
 @section('content')
 
 

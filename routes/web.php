@@ -44,6 +44,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 
         Route::get('/create', [NewsController::class, 'create'])->name('admin.newses.create');
         Route::post('/create', [NewsController::class, 'store'])->name('admin.store');
+
+        Route::get('/{id}', [NewsController::class, 'edit'])->name('admin.edit');
+        Route::put('/{id}', [NewsController::class, 'update'])->name('admin.edit');
+
         Route::delete('/{id}', [NewsController::class, 'destroy'])->name('admin.newses.destroy');
     });
 

@@ -2,19 +2,6 @@
 @section('title', 'Sportowe Newsy - zaloguj się')
 @section('content')
 
-
-    {{-- <form action="{{route('login')}}"method="post">
-    @csrf
-    
-    <label for="name">name</label>
-    <input type="text" name="name" id="name">
-    
-    <label for="password">password</label>
-    <input type="password" name="password" id="password">
-    
-    <button type="submit">wyślij</button>
-    
-</form> --}}
     <main class="container section login">
         <h2>Zaloguj się</h2>
         <div class="form">

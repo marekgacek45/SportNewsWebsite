@@ -1,7 +1,7 @@
 
 <div class="container-fluid">
     <div class="row">
-      <div class="col-md-3" style="display:flex;justify-content:center;align-items:center">
+      <div class="col-md-3" style="display:flex;justify-content:flex-start;align-items:flex-start">
         <div class="sidebar">
           <ul class="nav flex-column">
             <li class="nav-item">
