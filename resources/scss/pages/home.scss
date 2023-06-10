@@ -1,123 +1,165 @@
-@use '../utilities/mixins';
+@use "../utilities/mixins";
 
 .home {
-	
-	&__latest {
-		display: flex;
-		flex-direction: column;
-		@include mixins.large-devices {
-			flex-direction: row;
-		}
+    &__latest {
+        display: flex;
+        flex-direction: column;
+        @include mixins.large-devices {
+            flex-direction: row;
+        }
 
-		&-last {
-			width: 100%;
-			height: 50vh;
-			background-position: center;
-			background-size: cover;
-			position: relative;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-end;
-			@include mixins.large-devices {
-				height: auto;
-				width: 50%;
-				
-			}
-			&--opacity {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				background-color: black;
-				opacity: 0.5;
-			}
+        &-last {
+            width: 100%;
+            height: 50vh;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include mixins.large-devices {
+                height: auto;
+                width: 50%;
+            }
+            &--opacity {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: black;
+                opacity: 0.5;
+            }
 
-			&-text {
-				position: relative;
-				padding: 2em;
-				z-index: 100;
-				& h3 {
-					margin-bottom: 0.5em;
-					color: #F6FA70;
-					font-size: 1rem;
-					@include mixins.medium-devices {
-						font-size: 1.2rem
-					}
-				}
-				& p {
-					color: white;
-				}
-			}
-		}
-		&-rest {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			@include mixins.large-devices {
-				width: 50%;
-			}
-			&-card {
-				padding: 1em;
-				display: flex;
-				transition: all 0.6s;
-				border-bottom: 1px solid #F6FA70;
-				z-index: 100;
+            &-text {
+                position: relative;
+                padding: 2em;
+                z-index: 100;
+                & h3 {
+                    margin-bottom: 0.5em;
+                    color: #f6fa70;
+                    font-size: 1rem;
+                    @include mixins.medium-devices {
+                        font-size: 1.2rem;
+                    }
+                }
+                & p {
+                    color: white;
+                }
+            }
+        }
+        &-rest {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            @include mixins.large-devices {
+                width: 50%;
+            }
+            &-card {
+                padding: 1em;
+                display: flex;
+                transition: all 0.6s;
+                border-bottom: 1px solid #f6fa70;
+                z-index: 100;
 
-				&-text{
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					z-index: 100;
-					& h3 {
-						margin-bottom: 0.5em;
-						font-size: .8rem;
-						color: #F6FA70;
-						@include mixins.medium-devices {
-							font-size: 1rem
-						}
-						@include mixins.large-devices {
-							font-size: 1.2rem
-						}
-					}
-					& p {
-						color: white;
-					}
-				}
-				& img {
-					margin-left: 0.5em;
-					width: 100px;
-					z-index: 100;
-					
-					@include mixins.small-devices {
-						width: 150px;
-					}
-					@include mixins.medium-devices {
-						width: 200px;
-					}
-				}
-				@include mixins.large-devices {
-					&:hover {
-						margin-right: 1em;
-						background-color: #B0DAFF;
-					}
-				}
-			}
-		}
-	}
+                &-text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 100;
+                    & h3 {
+                        margin-bottom: 0.5em;
+                        font-size: 0.8rem;
+                        color: #f6fa70;
+						
+                        @include mixins.medium-devices {
+                            font-size: 1rem;
+                        }
+                        @include mixins.large-devices {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    & p {
+                        color: white;
+                    }
+                }
+                & img {
+                    margin-left: 0.5em;
+                    width: 100px;
+                    z-index: 100;
+
+                    @include mixins.small-devices {
+                        width: 150px;
+                    }
+                    @include mixins.medium-devices {
+                        width: 200px;
+                    }
+                }
+                @include mixins.large-devices {
+                    &:hover {
+                        margin-right: 1em;
+                        background-color: #b0daff;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.news_bgc{
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
-	position: relative;
-	&-opacity{
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: rgba(0,0,0,.6);
-	}
+.news_bgc {
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    // &-opacity {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     background-color: rgba(0, 0, 0, 0.6);
+    // }
+}
+
+.newses-categories {
+	display: flex;
+	flex-direction: column;
+    &__container {
+        display: flex;
+		justify-content: center;
+		// align-items: center;
+    }
+
+    &__card {
+		padding: 1em;
+		width: 33%;
+		height: 100%;
+		
+        & img {
+            width: 100%;
+			
+            height: 60%;
+			margin-bottom: .5em;
+			transition: transform .6s;
+			&:hover{
+				transform: scale(1.04);
+			}
+			
+        }
+		& h5{
+			color: black !important;
+			
+		}
+    }
+	
+}
+
+
+.heroImg{
+width: 100%;
+height: 200px;
+background-position: center;
+background-attachment: fixed;
+background-position: cover;
+
 }

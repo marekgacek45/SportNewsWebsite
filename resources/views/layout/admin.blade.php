@@ -23,7 +23,7 @@
 
 
 
-   
+    @include('components/nav')
 </body>
 
 
