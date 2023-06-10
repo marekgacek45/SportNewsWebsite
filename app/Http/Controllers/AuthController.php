@@ -37,7 +37,7 @@ class AuthController extends Controller
             'password'=>'required'
         ]);
         if(Auth::attempt($details)){
-            return redirect()->intended('/home');
+            return redirect()->intended('/');
         }
 
         return back()->withErrors([

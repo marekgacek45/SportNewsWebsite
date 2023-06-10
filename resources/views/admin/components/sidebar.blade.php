@@ -1,7 +1,7 @@
 
 <div class="container-fluid">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3" style="display:flex;justify-content:center;align-items:center">
         <div class="sidebar">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -22,18 +22,8 @@
                 <span class="sidebar-text">Dodaj newsa</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="uil uil-book-open"></i>
-                <span class="sidebar-text">Felietony</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="uil uil-book-medical"></i>
-                <span class="sidebar-text">Dodaj felieton</span>
-              </a>
-            </li>
+            
+           
             <li class="nav-item">
               <a class="nav-link" href="{{route('admin.categories')}}">
                 <i class="uil uil-list-ul"></i>

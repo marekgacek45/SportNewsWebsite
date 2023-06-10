@@ -15,7 +15,7 @@
 
 <body>
     @include('components/nav')
-    <main class="section container">
+    <main class="section container-fluid">
         @include('../admin/components/sidebar')
     
 
@@ -23,7 +23,7 @@
 
 
 
-    @include('components/nav')
+    
 </body>
 
 

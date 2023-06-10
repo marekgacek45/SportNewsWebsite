@@ -98,20 +98,7 @@
 
         <div class="heroImg" style="background-image: url('{{asset('storage/andrea-leopardi-QVD3Xht9txA-unsplash.jpg' )}}')"></div>
 
-         <section class="section newses_categories container" >
-            <h3>Pozostałe sporty</h3>
-            <div class="newses-categories__container">
-                @foreach ($other_newses as $other_news)
-                <div class="newses-categories__card">
-                    <a href="{{route('news',$other_news->id)}}">
-                    <img src="{{asset('storage/' . $other_news->image)  }}" alt="">
-                    <H4>{{ $other_news->title }}</H4>
-                </a>
-                </div>
-                @endforeach
-            </div>
-            <a href="{{ route('category', $hockey_news->category_id) }}">Więcej wiadomości z tej kategorii</a>
-        </section>
+         
     </main>
 
 
